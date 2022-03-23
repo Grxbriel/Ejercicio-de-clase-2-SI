@@ -1,5 +1,5 @@
 [img1]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/850d45e9176a8bb6298851118ff2b02d1d3eb877/1.png "Imagen1"
-
+[img2]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/e32d96b74308c88d19c38b026836af87c7eb2f81/image.png "Imagen2"
 
 # 💻 Ejercicio-de-clase-2-SI
 ---
@@ -13,4 +13,5 @@
 3. Usando el comando `C..` 3 veces volvemos al directorio inicial
 4. Usando el comando `CD PROG` nos situamos en PROG y ahí usamos el comando `DIR` para que nos muestre lo que tiene dentro
 
+![Imagen 2][img2]
 
