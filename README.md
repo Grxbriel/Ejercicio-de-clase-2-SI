@@ -9,4 +9,8 @@
 
 ![Imagen 1][img1]
 
+2. Con el comando `CD APLI/EXCEL/TABLAS` nos situamos en el directiorio Tablas
+3. Usando el comando `C..` 3 veces volvemos al directorio inicial
+4. Usando el comando `CD PROG` nos situamos en PROG y ahí usamos el comando `DIR` para que nos muestre lo que tiene dentro
+
 
