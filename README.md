@@ -1,5 +1,6 @@
 [img1]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/850d45e9176a8bb6298851118ff2b02d1d3eb877/1.png "Imagen1"
-[img2]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/e32d96b74308c88d19c38b026836af87c7eb2f81/image.png "Imagen2"
+[img2]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/65bedacd2c7937958f57fddd16a6f8cf012bf221/2.png "Imagen2"
+[img3]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/65bedacd2c7937958f57fddd16a6f8cf012bf221/3.png "Imagen3"
 
 # 💻 Ejercicio-de-clase-2-SI
 ---
@@ -15,3 +16,6 @@
 
 ![Imagen 2][img2]
 
+5. Para borrar la carpeta PASCAL usamos el comando `RMDIR PASCAL` y se nos eliminará
+
+![Imagen 3][img3]
