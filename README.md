@@ -239,13 +239,13 @@ REN KEPLER.txt GALILEO.txt
 
 ## 4️⃣ Ejercicio 4
 
-**1. Crea en la carpeta raíz de la unidad A: una carpeta denominada TECINFO
+**1. Crea en la carpeta raíz de la unidad A: una carpeta denominada TECINFO**
 ~~~
 MKDIR A
 MKDIR A\TECNIFO
 ~~~
 
-**2. Crea dentro de TECINFO el siguiente archivo de texto y llámalo HARD.TXT
+**2. Crea dentro de TECINFO el siguiente archivo de texto y llámalo HARD.TXT**
 
 >“El HARDWARE está constituido por los elementos físicos del ordenador. Consta esencialmente de componentes electrónicos que proporcionan el soporte necesario para la interpretación y ejecución de las operaciones elementales que realiza el ordenador”
 ~~~
