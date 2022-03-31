@@ -276,6 +276,7 @@ MV ORDER.txt ..\VARIOS\AGENDA\
 ~~~
 
 **6. Elimina la carpeta TECINFO**
+
 Elimino la carpeta TECNIFO desde la APLI.
 ~~~
 RMDIR ..\..\A\TECNIFO
@@ -296,6 +297,7 @@ REN .\ORDER.txt ORDER.typ
 ~~~
 
 **9. Cambia la primera letra del nombre de todos los archivos del directorio APLI que empiecen por la letra C y tengan extensión DOC de forma que empiecen con la letra S**
+
 Nos ubicamos en el directorio APLI y cambiamos los nombres de los archivos que coincidan:
 ~~~
 CD ..\..\APLI
