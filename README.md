@@ -158,43 +158,32 @@ CD ../.. && CP PROG/BASIC/NUEVO.txt APLI/WORD/NOTAS/
 En la carpeta BASIC nos encontramos con 2 archivos y en NOTAS nos encontramos con 1 solo archivo.
 
 ## 3️⃣ Ejercicio 3
-Borra la carpeta ACCESS y en su lugar crea una nueva carpeta llamada ASTRO
 
-Puesto que ACCES es un directorio vacio bastara con realizar lo siguiente:
+**1. Borra la carpeta ACCESS y en su lugar crea una nueva carpeta llamada ASTRO**
 
-rmdir .\PARTE1\APLI\ACCESS\
-A continuación realizamos el siguiente comando para crear la carpeta ASTRO:
+~~~
+RMDIR APLI\ACCESS
+MKDIR APLI\ASTRO
+~~~
 
-mkdir .\PARTE1\APLI\ASTRO
-Así quedará la estructura del directorio:
+**2. Crea la siguiente estructura de subcarpetas dentro de la carpeta ASTRO.**
+~~~
 
-Ejercicio 3.1
-
-Crea la siguiente estructura de subcarpetas dentro de la carpeta ASTRO.
-
-Ejercicio 3.2
-
-Para crear la estructura mostrada debemos hacer lo siguiente:
-
-a. Primero nos movemos a la carpeta ASTRO:
-
-  cd .\PARTE1\APLI\ASTRO\
-b. Procedemos a crear la estructura de directorios:
+~~~
 
 mkdir HISTORIA
 mkdir CIENCIA
-cd .\HISTORIA\
+cd HISTORIA\
 mkdir DATOS1
 mkdir DATOS2
 cd ..\CIENCIA\
 mkdir ASTRO1
 mkdir ASTRO2
-Después de hacer esto nos quedara la siguiente estructura:
 
-Ejercicio 3.2.1
+**3. Sitúate en la carpeta CIENCIA y desde allí muestra el listado de archivos y subcarpetas de la carpeta HISTORIA**
+~~~
 
-Sitúate en la carpeta CIENCIA y desde allí muestra el listado de archivos y subcarpetas de la carpeta HISTORIA
-
+~~~
 Primero nos ubicamos en la carpeta CIENCIA:
 
 cd .\APLI\ASTRO\CIENCIA\
@@ -203,64 +192,63 @@ Después mostramos el listado de archivos y subcarpetas de HISTORIA con tree. Ut
 tree /f ..\HISTORIA\
 Esto nos mostrará lo siguiente:
 
-Ejercicio 3.3
+**4. Utilizando el editor de MS-DOS crea el siguiente archivo de texto y guárdalo con el nombre TYCHO.TXT dentro de la carpeta DATOS1**
 
-Utilizando el editor de MS-DOS crea el siguiente archivo de texto y guárdalo con el nombre TYCHO.TXT dentro de la carpeta DATOS1
+>“La importancia de Tycho Brahe (1546-1601) es debida a sus trabajos observacionales, que registraron posiciones notables del Sol, la Luna y los planetas”
 
-“La importancia de Tycho Brahe (1546-1601) es debida a sus trabajos observacionales, que registraron posiciones notables del Sol, la Luna y los planetas”
+~~~
+CD APLI\ASTRO\HISTORIA\DATOS1\
+NEW ITEM TYCHO.txt 
+SET-CONTENT TYCHO.txt
+~~~
 
-Ubicados en la carpeta raíz realizamos el siguiente comando para crear el archivo con texto:
+**5. Utilizando de nuevo el editor de textos de MS-DOS crea el siguiente archivo de texto, y guárdalo con el nombre KEPLER.TXT dentro de la carpeta DATOS2**
 
-cd .\APLI\ASTRO\HISTORIA\DATOS1\
-New-Item TYCHO.txt 
-Set-Content .\TYCHO.txt
-Con set-content se nos mostrará una interfaz donde podremos introducir el texto.
+>“ La información acumulada facilitó a Johannes Kepler (1571-1630) el descubrimiento de las leyes que gobiernan el movimiento de los planetas”
+~~~
+NEW-ITEM KEPLER.txt
+SET-CONTENT KEPLER.txt
+~~~
 
-Utilizando de nuevo el editor de textos de MS-DOS crea el siguiente archivo de texto, y guárdalo con el nombre KEPLER.TXT dentro de la carpeta DATOS2
+**6. Copia los archivos TYCHO.TXT y KEPLER.TXT en la carpeta CIENCIA**
 
-Set-Content -Path .\KEPLER.txt
-Copia los archivos TYCHO.TXT y KEPLER.TXT en la carpeta CIENCIA
+~~~
+CP ..\DATOS1\TYCHO.txt ..\..\CIENCIA\
+CP KEPLER.txt ..\..\CIENCIA\
+~~~
 
-Primero copiamos TYCHO.txt:
+**7. Cambia de lugar los archivos almacenados en DATOS1 y DATOS2 de forma que TYCHO.TXT quede guardado dentro DATOS2 y KEPLER.TXT en DATOS1**
 
-copy ..\DATOS1\TYCHO.txt ..\..\CIENCIA\
-copy .\KEPLER.txt ..\..\CIENCIA\
-Y nos quedará una estructura de directorios así:
-
-Ejercicio 3.6
-
-Cambia de lugar los archivos almacenados en DATOS1 y DATOS2 de forma que TYCHO.TXT quede guardado dentro DATOS2 y KEPLER.TXT en DATOS1
-
+~~~
 Movemos KEPLER a DATOS1 desde la carpeta DATOS2:
-
-  move .\KEPLER.txt .
+  MV KEPLER.txt .
 Después movemos TYCHO a DATOS2 desde la carpeta DATOS1:
+ MV TYCHO.txt ..\DATOS2\
+~~~
 
- move .\TYCHO.txt ..\DATOS2\
-Crea un nuevo archivo formado por la unión de los dos anteriores (sin volver a escribir el texto) y guárdalo dentro de la carpeta HISTORIA con el nombre TOTAL.TXT
-
-Desde la carpeta CIENCIA, donde estan alojados los 2 archivos que debemos unir ejecutamos lo siguiente:
-
+**8. Crea un nuevo archivo formado por la unión de los dos anteriores (sin volver a escribir el texto) y guárdalo dentro de la carpeta HISTORIA con el nombre TOTAL.TXT**
+~~~
 type *.txt > nuevo.temp
-ren .\nuevo.temp .\nuevo.txt
+REN .\nuevo.temp .\TOTAL.txt
 El archivo lo he creado en CIENCIA, por lo que lo movere a HISTORIA:
 
-move .\nuevo.txt ..\HISTORIA\
-Abre el archivo KEPLER.TXT almacenado en la carpeta CIENCIA y añade el siguiente texto:
+MV TOTAL.txt ..\HISTORIA\
+~~~
 
-“Kepler aplicó sus teorías a los satélites de Júpiter, descubiertos por Galileo a través de un pequeño telescopio, cuya introducción en la observación astronómica constituye uno de los hitos de la astronomía.”
+**9. Abre el archivo KEPLER.TXT almacenado en la carpeta CIENCIA y añade el siguiente texto:**
+>“Kepler aplicó sus teorías a los satélites de Júpiter, descubiertos por Galileo a través de un pequeño telescopio, cuya introducción en la observación astronómica constituye uno de los hitos de la astronomía.”
 
-Para ello realizamos lo siguiente:
-
+~~~
 echo "Kepler aplicó sus teorías a los satélites de Júpiter, descubiertos por Galileo a través de un pequeño telescopio, cuya introducción en la observación astronómica constituye uno de los hitos de la astronomía." >> .\KEPLER.txt
-Cambia el nombre del archivo anterior por GALILEO.txt
+~~~
 
-ren .\KEPLER.txt .\GALILEO.txt
-Y nos quedará una estructura de archivos y directorios así:
+**10. Cambia el nombre del archivo anterior por GALILEO.txt**
+~~~
+REN KEPLER.txt GALILEO.txt
+~~~
 
-Ejercicio 3.10
 
-Ejercicio 4
+## 4️⃣ Ejercicio 4
 Crea en la carpeta raíz de la unidad A: una carpeta denominada TECINFO
 
 mkdir A
