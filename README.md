@@ -89,18 +89,18 @@ CD APLI/WORD/PRACT/ && ls ..
 >"La información dentro de los discos se almacena en forma de archivos. Un archivo o fichero es un conjunto de datos que MS-DOS almacena en un disco y cuyo control interno es realizado por el sistema operativo, aunque desde el punto de vista lógico el control es del usuario"
 
 ~~~
-NEW-ITEM ejercicio.txt
+NEW-ITEM EJER.txt
 
-SET-CONTENT ./ejercicio.txt
+SET-CONTENT ./EJER.txt
 
-MV ejercicio.txt ./APLI/WORD/TEXTOS
+MV EJER.txt ./APLI/WORD/TEXTOS
 ~~~
 
 
 **2.Copia el archivo EJER.TXT en AGENDA**
 
 ~~~
-CD ../../.. && CP APLI/WORD/TEXTOS/ejercicio.txt VARIOS/AGENDA
+CD ../../.. && CP APLI/WORD/TEXTOS/EJER.txt VARIOS/AGENDA
 ~~~
 
 **3. Borra el archivo almacenado en la carpeta TEXTOS.**
@@ -114,7 +114,7 @@ rm -r APLI/WORD/TEXTOS/
 >"Cada archivo tiene un nombre y una extensión que los distingue del resto de archivos"
 
 ~~~
-SET-CONTENT ejercicio.txt
+SET-CONTENT EJER.txt
 
 cmdlet Set-Content at command pipeline position 1
 Supply values for the following parameters:
