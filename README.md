@@ -2,6 +2,8 @@
 [img2]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/65bedacd2c7937958f57fddd16a6f8cf012bf221/2.png "Imagen2"
 [img3]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/65bedacd2c7937958f57fddd16a6f8cf012bf221/3.png "Imagen3"
 [img4]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/1b3c33dfc0cecd32d9d3a38d876473169fef9b9b/4.png "Imagen4"
+[img5]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/0b87c05615a79d69e11426e925a7da83ce568ade/5.png "Imagen5"
+[img6]: https://github.com/Grxbriel/Ejercicio-de-clase-2-SI/blob/0b87c05615a79d69e11426e925a7da83ce568ade/6.png "Imagen6"
 
 # 💻 Ejercicio-de-clase-2-SI
 ---
@@ -167,30 +169,16 @@ MKDIR APLI\ASTRO
 ~~~
 
 **2. Crea la siguiente estructura de subcarpetas dentro de la carpeta ASTRO.**
-~~~
 
-~~~
-
-mkdir HISTORIA
-mkdir CIENCIA
-cd HISTORIA\
-mkdir DATOS1
-mkdir DATOS2
-cd ..\CIENCIA\
-mkdir ASTRO1
-mkdir ASTRO2
+![Imagen5][img5]
 
 **3. Sitúate en la carpeta CIENCIA y desde allí muestra el listado de archivos y subcarpetas de la carpeta HISTORIA**
 ~~~
+CD APLI\ASTRO\CIENCIA\
 
+TREE /f ..\HISTORIA\
 ~~~
-Primero nos ubicamos en la carpeta CIENCIA:
-
-cd .\APLI\ASTRO\CIENCIA\
-Después mostramos el listado de archivos y subcarpetas de HISTORIA con tree. Utilizamos el parametro /f para que muestre tambien los archivos:
-
-tree /f ..\HISTORIA\
-Esto nos mostrará lo siguiente:
+![Imagen6][img6]
 
 **4. Utilizando el editor de MS-DOS crea el siguiente archivo de texto y guárdalo con el nombre TYCHO.TXT dentro de la carpeta DATOS1**
 
@@ -198,7 +186,7 @@ Esto nos mostrará lo siguiente:
 
 ~~~
 CD APLI\ASTRO\HISTORIA\DATOS1\
-NEW ITEM TYCHO.txt 
+NEW-ITEM TYCHO.txt 
 SET-CONTENT TYCHO.txt
 ~~~
 
@@ -213,6 +201,7 @@ SET-CONTENT KEPLER.txt
 **6. Copia los archivos TYCHO.TXT y KEPLER.TXT en la carpeta CIENCIA**
 
 ~~~
+Desde DATOS2
 CP ..\DATOS1\TYCHO.txt ..\..\CIENCIA\
 CP KEPLER.txt ..\..\CIENCIA\
 ~~~
@@ -228,8 +217,8 @@ Después movemos TYCHO a DATOS2 desde la carpeta DATOS1:
 
 **8. Crea un nuevo archivo formado por la unión de los dos anteriores (sin volver a escribir el texto) y guárdalo dentro de la carpeta HISTORIA con el nombre TOTAL.TXT**
 ~~~
-type *.txt > nuevo.temp
-REN .\nuevo.temp .\TOTAL.txt
+type *.txt > NUEVO.temp
+REN NUEVO.temp .\TOTAL.txt
 El archivo lo he creado en CIENCIA, por lo que lo movere a HISTORIA:
 
 MV TOTAL.txt ..\HISTORIA\
@@ -243,66 +232,79 @@ echo "Kepler aplicó sus teorías a los satélites de Júpiter, descubiertos por
 ~~~
 
 **10. Cambia el nombre del archivo anterior por GALILEO.txt**
+
 ~~~
 REN KEPLER.txt GALILEO.txt
 ~~~
 
-
 ## 4️⃣ Ejercicio 4
-Crea en la carpeta raíz de la unidad A: una carpeta denominada TECINFO
 
-mkdir A
-mkdir .\A\TECNIFO
-Crea dentro de TECINFO el siguiente archivo de texto y llámalo HARD.TXT
+**1. Crea en la carpeta raíz de la unidad A: una carpeta denominada TECINFO
+~~~
+MKDIR A
+MKDIR A\TECNIFO
+~~~
 
-“El HARDWARE está constituido por los elementos físicos del ordenador. Consta esencialmente de componentes electrónicos que proporcionan el soporte necesario para la interpretación y ejecución de las operaciones elementales que realiza el ordenador”
+**2. Crea dentro de TECINFO el siguiente archivo de texto y llámalo HARD.TXT
 
-Para hacer esto primero nos movemos a la carpeta TECNIFO y añadimos el texto con echo
-
-cd .\A\TECNIFO\
+>“El HARDWARE está constituido por los elementos físicos del ordenador. Consta esencialmente de componentes electrónicos que proporcionan el soporte necesario para la interpretación y ejecución de las operaciones elementales que realiza el ordenador”
+~~~
+CD A\TECNIFO\
 echo "El HARDWARE está constituido por los elementos físicos del ordenador. Consta esencialmente de componentes electrónicos que proporcionan el soporte necesario para la interpretación y ejecución de las operaciones elementales que realiza el ordenador" > HARD.txt
-Crea dentro de TECINFO el siguiente archivo de texto y llámalo SOFT.TXT
+~~~
 
-“El SOFTWARE es el conjunto de elementos lógicos necesarios para que el ordenador realice las funciones que se le encomiendan. Está formado por los programas, es decir, por un conjunto ordenado de instrucciones, comprensibles por la máquina, que permiten desarrollar tareas concretas”
+**3. Crea dentro de TECINFO el siguiente archivo de texto y llámalo SOFT.TXT**
 
+>“El SOFTWARE es el conjunto de elementos lógicos necesarios para que el ordenador realice las funciones que se le encomiendan. Está formado por los programas, es decir, por un conjunto ordenado de instrucciones, comprensibles por la máquina, que permiten desarrollar tareas concretas”
+~~~
 echo "El SOFTWARE es el conjunto de elementos lógicos necesarios para que el ordenador realice las funciones que se le encomiendan. Está formado por los programas, es decir, por un conjunto ordenado de instrucciones, comprensibles por la máquina, que permiten desarrollar tareas concretas" > SOFT.txt
-Mueve el contenido de TECINFO a la carpeta APLI del disquete A utilizado para realizar los ejercicios anteriores
+~~~
 
-Desde el disco A hacemos lo siguiente:
+**4. Mueve el contenido de TECINFO a la carpeta APLI del disquete A utilizado para realizar los ejercicios anteriores**
 
-move .\TECNIFO\* ..\PARTE1\APLI\
-Crea un nuevo archivo formado por la unión de HARD.TXT y SOFT.TXT, sin volver a escribir el texto, y guárdalo en la carpeta AGENDA con el nombre ORDER.TXT
+~~~
+MV TECNIFO\* ..\Ejercicio-de-clase-2-SI\APLI
+~~~
 
-Primero nos movemos a la carpeta APLI para luego unir los dos archivos de texto. Este archivo donde lo unimos tendrá la extencion .temp por lo que después lo renombraremos a ORDER.txt y finalmente lo moveremos a AGENDA.
+**5. Crea un nuevo archivo formado por la unión de HARD.TXT y SOFT.TXT, sin volver a escribir el texto, y guárdalo en la carpeta AGENDA con el nombre ORDER.TXT**
 
-cd ..\PARTE1\APLI\
-type *.txt >nuevo.temp
-ren .\nuevo.temp ORDER.txt
-move .\ORDER.txt ..\VARIOS\AGENDA\
-Elimina la carpeta TECINFO
+~~~
+CD ..\Ejercicio-de-clase-2-SI\APLI\
+type *.txt >NUEVO.temp
+REN NUEVO.temp ORDER.txt
+MV ORDER.txt ..\VARIOS\AGENDA\
+~~~
 
+**6. Elimina la carpeta TECINFO**
 Elimino la carpeta TECNIFO desde la APLI.
+~~~
+RMDIR ..\..\A\TECNIFO
+~~~
 
-rmdir ..\..\A\TECNIFO\
-Copia a la vez los archivos HARD.TXT y SOFT.TXT en la carpeta VARIOS
+**7. Copia a la vez los archivos HARD.TXT y SOFT.TXT en la carpeta VARIOS**
 
+~~~
 Ubicados en APLI movemos los dos archivos a VARIOS.
+MV .\*.txt ..\VARIOS
+~~~
 
- move .\*.txt ..\VARIOS\
-Cambia la extensión de los archivos contenidos en AGENDA por .TYP
+**8. Cambia la extensión de los archivos contenidos en AGENDA por .TYP**
 
-Nos movemos a AGENDA y procedemos a cambiarle la extención:
+~~~
+CD ..\VARIOS\AGENDA\
+REN .\ORDER.txt ORDER.typ
+~~~
 
-cd ..\VARIOS\AGENDA\
-ren .\ORDER.txt ORDER.typ
-Cambia la primera letra del nombre de todos los archivos del directorio APLI que empiecen por la letra C y tengan extensión DOC de forma que empiecen con la letra S
-
+**9. Cambia la primera letra del nombre de todos los archivos del directorio APLI que empiecen por la letra C y tengan extensión DOC de forma que empiecen con la letra S**
 Nos ubicamos en el directorio APLI y cambiamos los nombres de los archivos que coincidan:
+~~~
+CD ..\..\APLI
+REN C*.doc S*.doc
+~~~
 
-cd .\APLI\
-ren .\C*.doc S*.doc
-Copia los archivos contenidos en la carpeta APLI que tengan extensión DOC en la carpeta AGENDA
-
+**10. Copia los archivos contenidos en la carpeta APLI que tengan extensión DOC en la carpeta AGENDA**
+~~~
 Desde la carpeta APLI hacemos lo siguiente:
+CP *.doc ..\VARIOS\AGENDA\
+~~~
 
- copy *.doc ..\VARIOS\AGENDA\
